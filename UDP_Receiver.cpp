@@ -2,8 +2,7 @@
 
 int UDP_Receiver::UDP_Receiver_INIT()
 {
-	int errorcode = WSAStartup(MAKEWORD(2, 2), &WSA);
-	if (errorcode != 0){
+	if (int errorcode = WSAStartup(MAKEWORD(2, 2), &WSA)){
 		wprintf(L"WSAStartup function failed with error = %d\n", errorcode);
 		return EXIT_FAILURE;
 	}
