@@ -10,7 +10,7 @@ HCURSOR createBlankCursor()
 	memset(cursorAND, 0xff, ch * ((cw + 31) >> 2));
 	memset(cursorXOR, 0x00, ch * ((cw + 31) >> 2));
 	HCURSOR c = CreateCursor(GetModuleHandle(NULL),
-		0, 0, cw, ch, cursorAND, cursorXOR);
+	0, 0, cw, ch, cursorAND, cursorXOR);
 	delete[] cursorXOR;
 	delete[] cursorAND;
 	return c;
