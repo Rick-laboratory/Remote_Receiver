@@ -76,19 +76,9 @@ void MI::ShowCursor(int*)
 // instr[0] = 6
 void MI::HideCursor(int*)
 {
-	SetSystemCursor(createBlankCursor(), 32512);
-	SetSystemCursor(createBlankCursor(), 32650);
-	SetSystemCursor(createBlankCursor(), 32515);
-	SetSystemCursor(createBlankCursor(), 32649);
-	SetSystemCursor(createBlankCursor(), 32651);
-	SetSystemCursor(createBlankCursor(), 32513);
-	SetSystemCursor(createBlankCursor(), 32648);
-	SetSystemCursor(createBlankCursor(), 32646);
-	SetSystemCursor(createBlankCursor(), 32643);
-	SetSystemCursor(createBlankCursor(), 32645);
-	SetSystemCursor(createBlankCursor(), 32642);
-	SetSystemCursor(createBlankCursor(), 32644);
-	SetSystemCursor(createBlankCursor(), 32516);
-	SetSystemCursor(createBlankCursor(), 32514);
+	for (int i = 0; i < 14; i++)
+	{
+		SetSystemCursor(createBlankCursor(), Cursors[i]);
+	}
 	DestroyCursor(createBlankCursor());
 }
