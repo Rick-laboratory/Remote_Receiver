@@ -45,6 +45,9 @@ int UDP_Receiver::UDP_Receiver_EXEC()
 		// TODO: Handle Invalid initialisation.									//Clap Two
 		// Extra security layer could be to only initialise instructions from authorised IDs :) 
 		// It will also avoid colisions between mutliple servers in one network // Unique server/client IDs
+		// This is not a final answer its just an answer for now.
+		// since this tool is running within a local network there are also ways around all that stuff by just configuring it properly per User in a Network.
+		// I know thats not a thing we can expect from an enduser perspective but from a dev perspective sure we can.
 		sscanf_s(Buffer_recv, "%d %d %d", &instr[0], &instr[1], &instr[2]);
 		(*MI_Obj.*func_ptr[instr[0]])(pt);
 	}
