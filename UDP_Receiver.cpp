@@ -39,6 +39,10 @@ int UDP_Receiver::UDP_Receiver_EXEC()
 	while (true)
 	{
 		recv(Socket, Buffer_recv, Buffer_len, 0); 
+		// TODO: Implement AES 256 / Invalid instructions should be filtered automaticaly   			//Clap one
+		// due to the likelyhood of invalid initializations in a case of decryption of provoking broadcasts. 
+		// Three flies in two claps basicly.
+		// TODO: Handle Invalid initialisation.									//Clap Two
 		sscanf_s(Buffer_recv, "%d %d %d", &instr[0], &instr[1], &instr[2]);
 		(*MI_Obj.*func_ptr[instr[0]])(pt);
 	}
