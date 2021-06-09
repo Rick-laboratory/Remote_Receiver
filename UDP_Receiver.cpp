@@ -45,7 +45,6 @@ int UDP_Receiver::UDP_Receiver_EXEC()
 		// TODO: Handle Invalid initialisation.									//Clap Two
 		// Extra security layer could be to only initialise instructions from authorised IDs :) 
 		// It will also avoid colisions between mutliple servers in one network // Unique server/client IDs
-		// I would sync those with a unique encryption cycle feed running on Server and Client
 		sscanf_s(Buffer_recv, "%d %d %d", &instr[0], &instr[1], &instr[2]);
 		(*MI_Obj.*func_ptr[instr[0]])(pt);
 	}
